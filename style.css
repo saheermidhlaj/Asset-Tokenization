@@ -145,7 +145,7 @@ button {
 
 .asset-info h2 {
     font-size: 2em;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -159,8 +159,10 @@ button {
 .asset-info .buttons button {
     width: 250px;
     height: 50px;
+    margin:10px;
+    color: #ffffff;
     border-radius: 10px;
-    background: #fff;
+    background: linear-gradient(to right, #DC143C, #8A2BE2);
     border: none;
     outline: none;
     cursor: pointer;
@@ -169,5 +171,84 @@ button {
 }
 
 .asset-info .buttons button:hover {
-    background: #ddd;
+    background: linear-gradient(to right,  #FF8C00,#0404ff);
 }
+
+.tokenize-form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: auto; 
+    padding: 20px;
+    margin: 10px;
+}
+
+.tokenize-form h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tokenize-form form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tokenize-form .inputbox {
+    border:none;
+    position: relative;
+    
+    margin-bottom: 30px;
+}
+
+.tokenize-form label {
+    position: absolute;
+    top:5px;
+    left: 10px;
+    color: #fff;
+    
+    transition: all 0.3s ease;
+}
+
+.tokenize-form input {
+    width: 410px;
+    padding: 10px;
+    border: 60px;
+    outline: 60px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.tokenize-form input:focus + label,
+.tokenize-form input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.tokenize-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #DC143C, #8A2BE2);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tokenize-form button:hover {
+    background: linear-gradient(to right,  #FF8C00,#0404ff);
+}
+
