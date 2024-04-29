@@ -66,9 +66,27 @@
   <div class="asset-info" id="assetInfo" style="display: none;">
     <h2>Asset Tokenizer</h2>
     <div class="buttons">
-      <button>View Tokenized Assets</button>
-      <button>Tokenize Assets Now</button>
+      <button onclick="showTokenizeForm()">View Tokenized Assets</button>
+      <button onclick="showTokenizeNowForm()">Tokenize Assets Now</button>
     </div>
+  </div>
+  <div class="tokenize-form" id="tokenizeForm" style="display: none;">
+    <h2>Tokenize Assets</h2>
+    <form>
+      <div class="inputbox">
+        <label for="songInput">Song:</label>
+        <input type="text" id="songInput" required>
+      </div>
+      <div class="inputbox">
+        <label for="artistInput">Artist:</label>
+        <input type="text" id="artistInput" required>
+      </div>
+      <div class="inputbox">
+        <label for="yearInput">Year:</label>
+        <input type="text" id="yearInput" required>
+      </div>
+      <button>Upload file</button>
+    </form>
   </div>
 </section>
 <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
@@ -94,9 +112,28 @@
     loginForm.style.display = "none";
     signupForm.style.display = "block";
   }
+
+  function showTokenizeForm() {
+    var tokenizeForm = document.getElementById("tokenizeForm");
+    var assetInfo = document.getElementById("assetInfo");
+
+    tokenizeForm.style.display = "block";
+    assetInfo.style.display = "none";
+  }
+
+  function showTokenizeNowForm() {
+    var tokenizeForm = document.getElementById("tokenizeForm");
+    var assetInfo = document.getElementById("assetInfo");
+
+    assetInfo.style.display = "none";
+    tokenizeForm.style.display = "block";
+  }
 </script>
 </body>
 </html>
+
+
+
 
 
 
